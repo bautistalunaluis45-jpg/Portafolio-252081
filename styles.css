@@ -1,0 +1,229 @@
+:root {
+    --color-white: #ffffff;
+    --color-primary: rgb(58, 146, 223);
+    --color-accent-green: rgb(85, 219, 86);
+    --color-footer: #4ab55a;
+    --color-border: #dddddd;
+    --color-surface: #f9f9f9;
+    --color-surface-hover: #f1f1f1;
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 70px;
+    color: var(--color-white);
+}
+
+.career-name {
+    font-family: "Times New Roman", Times, serif;
+    font-style: italic;
+    font-size: 70px;
+    color: var(--color-white);
+}
+
+.menu-titulo {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;   /* centra el menú */
+    gap: 18px;                 /* espacio entre links */
+    margin-top: 18px;
+    padding: 8px 12px;
+    background: rgba(0,0,0,0.12);
+    backdrop-filter: blur(6px);
+    border-radius: 999px;
+    align-items: center;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+}
+
+.menu-titulo a {
+    color: var(--color-footer);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 160ms ease;
+    display: inline-block;
+}
+
+.menu-titulo a:hover {
+    background: var(--color-white);
+    color: var(--color-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+.menu-titulo a:active {
+    transform: translateY(0);
+}
+
+/* If you want to mark the current page, add class="active" to the anchor */
+.menu-titulo a.active {
+    background: var(--color-white);
+    color: var(--color-primary);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.08);
+}
+
+@media (max-width: 640px) {
+    .menu-titulo { gap: 10px; padding: 6px; }
+    .menu-titulo a { padding: 6px 10px; font-size: 14px; }
+}
+
+.subtitulo {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 45px;
+    color: var(--color-accent-green);
+}
+
+.subtitulo2 {
+
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 25px;
+    margin-bottom: 20px;
+    color: var(--color-primary);
+
+}
+
+p {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+ul {
+    padding-left: 30px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+body {
+    margin: 0;
+}
+
+body, html {
+    overflow-y: scroll;
+}
+
+main {
+    margin: 20px;
+}
+
+footer {
+    background-color: var(--color-footer);
+    color: var(--color-white);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.hero {
+    background-image: url("images/rio2.jpg"); /* ruta de tu imagen */
+    background-size: cover;        /* que cubra todo */
+    background-position: center;   /* centrada */
+    background-repeat: no-repeat;  
+    height: 400px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--color-white);
+    text-align: center;
+    margin: 0;
+}
+
+.experience-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 40px 0;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.experience-table th,
+.experience-table td {
+    border: 1px solid var(--color-border);
+    padding: 12px 15px;
+}
+
+.experience-table th {
+    background-color: var(--color-primary); /* estilo del portafolio */
+    color: var(--color-white);
+    text-align: left;
+}
+
+.experience-table tr:nth-child(even) {
+    background-color: var(--color-surface);
+}
+
+.experience-table tr:hover {
+    background-color: var(--color-surface-hover);
+}
+
+.experience-table td {
+    vertical-align: top; /* para que la descripción larga se vea bien */
+}
+
+/* Hobbies: Grid de tarjetas responsiva + tarjetas con Flexbox */
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.card {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+}
+
+.card-content {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.card-icon {
+    width: 56px;
+    height: 56px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    background: var(--color-surface);
+    border-radius: 8px;
+    color: var(--color-primary);
+}
+
+.card-title {
+    margin: 0 0 6px 0;
+    font-size: 18px;
+}
+
+.card-desc {
+    margin: 0;
+    color: #333;
+    font-size: 14px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .card { background: #111; border-color: #222; }
+    .card-desc { color: #ddd; }
+}
+

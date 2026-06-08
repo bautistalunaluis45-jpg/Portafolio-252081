@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+    
+    <!-- No visible pero importante -->
+    <head>
+        <!-- Defiine la codificación de caracteres de nuestra página web -->
+        <meta charset="UTF-8">
+        <!-- Permite que el sitio se apadte a distintas resoluciones -->
+        <meta name="viewport" content="width=evice-width, initial-scale=1.0" >
+        <!-- Breve descripción del contenido de nuestro sitio web -->
+        <meta name="description" content="Portafolio profesional de un ingeniro en software">
+        <!-- Palabras clave -->
+        <meta name="keywords" content="portafolio, ingeniero en software, ti, desarrollo web">
+        <meta name="author" content="Luis Fernando Bautista Luna">
+        <meta name="robots" content="index, follow">
+
+        <title>KLOK</title>
+        <link rel="icon" type="image/png" href="images/">
+        <link rel="stylesheet" href="styles.css">
+
+
+    </head>
+
+    <!-- Visible para el usuario -->
+    <body>
+        <header> 
+            <!-- Etiqueta para titulos -->
+            
+            <section class="hero">
+                <h1>Luis Fernando Bautista Luna</h1>
+                <h1 class="career-name">Software Engineer</h1>
+            </section>
+            
+            <nav class="menu-titulo">
+                <a href="/index.html" target="_blank" rel="noopener noreferrer"> Home</a>
+                <a href="/about.html"> About</a>
+                <a href="/contact.html"> Contact</a>               
+                <a href="/experience.html"> Experience</a>
+                <a href="/projects.html"> Projects</a>
+                <a href="/skills.html"> Skills</a>
+                <a href="/hobbies.html"> Hobbies</a>
+            </nav>
+
+        </header>
+        
+        <main> 
+            <h2 class="subtitulo">Formulario de contacto</h2>
+            <form action="urlDestino" method="post">
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Jijia">
+                <br>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="ejemplo@gmail.com" required pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$">
+                <br>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono">
+                <br>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha">
+                <br>
+
+                <label for="motivo">Motivo de contacto:</label>
+                <select id="motivo" name="motivo">
+                    <option value="">Seleccione una opción</option>
+                    <option value="trabajo">Trabajo</option>
+                    <option value="asesoria">Asesoría</option>
+                    <option value="otro">Otro</option>
+                </select>
+                <br>
+
+                <label>Cómo te gustaría contactarte:</label>
+                <br>
+                <input type="radio" id="contacto-correo" name="contacto" value="correo">
+                <label for="contacto-correo">Correo</label>
+                <br>
+
+                <input type="radio" id="contacto-whats" name="contacto" value="whatsapp">
+                <label for="contacto-whats">WhatsApp</label>
+                <br>
+
+                <button type="reset">Limpiar</button>
+                <button type="submit">Guardar</button>
+
+            </form>
+
+
+        </main>
+
+        <footer> 
+            <section>
+                Follow me on my Instagram:
+                <a href="www.micasita.com"> micasita</a>
+            </section>
+            <p>&copy; 2026 Luis Fernando Bautista Luna. All rightt reserved</p>
+        </footer>
+    </body>
+</html>
